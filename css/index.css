@@ -3513,36 +3513,6 @@ span.tags-punctuation::before {
   content: '';
   z-index: -1;
 }
-#footer div#st-footer-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 16px;
-}
-#footer div#st-footer-bar a.footer-bar-link {
-  padding: 4px 16px;
-  background: var(--efu-secondbg);
-  border-radius: 20px;
-  margin-top: 8px;
-  font-size: 14px;
-  cursor: pointer;
-  border: var(--style-border-always);
-}
-#footer div#st-footer-bar a.footer-bar-link:hover {
-  background: var(--efu-main);
-  color: var(--efu-white);
-  transform: scale(1.1);
-  border-color: var(--efu-main);
-}
-#footer div#st-footer-bar .footer-logo {
-  font-size: 24px;
-}
-#footer div#st-footer-bar .footer-bar-description {
-  color: var(--efu-secondtext);
-  font-weight: 700;
-  padding: 0 0.5rem;
-  text-align: center;
-}
 #footer #footer_deal {
   justify-content: center;
   display: flex;
