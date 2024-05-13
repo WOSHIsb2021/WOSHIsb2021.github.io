@@ -6184,69 +6184,6 @@ span.tagsPageCount {
   font-size: 0.6rem;
   margin-bottom: 0.5rem;
 }
-.author-content-item.personalities {
-  overflow: hidden;
-  position: relative;
-  width: 59.5%;
-}
-@media screen and (max-width: 768px) {
-  .author-content-item.personalities {
-    min-height: 360px;
-  }
-}
-.author-content-item.personalities .title2 {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.1;
-}
-.author-content-item.personalities .image {
-  position: absolute;
-  right: -40px;
-  bottom: -10rem;
-  transition: transform 2s cubic-bezier(0.13, 0.45, 0.21, 1.02);
-  user-select: none;
-}
-@media screen and (max-width: 768px) {
-  .author-content-item.personalities .image {
-    right: -70px;
-  }
-}
-.author-content-item.personalities:hover .image {
-  transform: rotate(-10deg);
-}
-#about-page .author-content-item.myphoto {
-  height: 60%;
-  min-height: 240px;
-  position: relative;
-  overflow: hidden;
-  width: 39.5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#about-page .author-content-item.myphoto img {
-  position: absolute;
-  height: 100%;
-  min-width: 100%;
-  object-fit: cover;
-  transition: 0.6s;
-  user-select: none;
-}
-#about-page .author-content-item.myphoto:hover img {
-  min-width: 105%;
-  transition: 2s;
-}
-#about-page .author-content-item.myphoto .myphoto-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: var(--efu-maskbgdeep);
-  padding: 0.5rem 2rem;
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  transform: translateZ(0);
-}
 #about-page .author-content-item.careers {
   min-height: 400px;
 }
