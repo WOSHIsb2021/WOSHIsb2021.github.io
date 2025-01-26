@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Play with Docker | Nothing</title><noscript>Please enable JavaScript to view the site</noscript><link rel="icon" href="/img/pwa/favicon.ico"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.10.6"><!-- inject head--><link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/7pOrz0WXB5ZWJPX/latest/iconfont.css"><!-- aplayer--><!-- swiper--><!-- fancybox ui--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.36/fancybox/fancybox.min.css"><!-- katex--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css"><!-- Open Graph--><meta name="description" content="Play with Docker +++ 使用 Play with Docker 访问 Play with Docker 需要特定的（魔法）网络设置。登录 Docker 账号以开始使用。 当然本地安装 docker 更加方便，VMware 也不错，但 Play with Docker 无需安装即可体"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="Nothing"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/pwa/favicon.ico"><link rel="apple-touch-icon" href="/img/pwa/favicon.ico" sizes="180x180"><script>console.log(
+    "%c Program: Hexo %c Theme: Solitude %c Version: v1.10.6",
+    "border-radius:5px 0 0 5px;padding: 5px 10px;color:white;background:#ff3842;",
+    "padding: 5px 10px;color:white;background:#3e9f50;",
+    "padding: 5px 10px;color:white;background:#0084ff;border-radius:0 5px 5px 0",
+)
+</script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+    
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+    
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+    
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+    
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+        
+                if (name && keyObj[name]) return
+        
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+        }
+    })()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2024-05-09 16:00:00',
+    lazyload: {
+        enable: true,
+        error: '/img/error_load.webp'
+    },
+    copyright: {"limit":50,"author":"Author: NOBODY","link":"Link: ","source":"Source: Nothing","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."},
+    highlight: {
+        enable: true,
+        limit: 200,
+        expand: true,
+        copy: true,
+        syntax: 'highlight.js'
+    },
+    randomlink: false,
+    lang: {"theme":{"dark":"Dark","light":"Light"},"copy":{"success":"Copied","error":"Copy failed"},"backtop":"Back to top","time":{"day":" days ago","hour":" hours ago","just":"just","min":" minutes ago","month":" months ago"},"f12":"Developer mode is turned on, please follow the GPL.","totalk":"You don't need to delete blank lines, just type in your comments."},
+    aside: {
+        sayhello: {
+            morning: '一日之计在于晨',
+            noon: '吃饱了才有力气干活',
+            afternoon: '集中精力，攻克难关',
+            night: '早睡更健康',
+            goodnight: '睡个好觉，保证精力充沛',
+        },
+        sayhello2: [],
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: false,
+    lightbox: 'fancybox',
+    post_ai: false,
+    right_menu: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: false,
+    ai_text: false
+}</script><meta name="generator" content="Hexo 7.2.0"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude st-close-fill"></i></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="Day and night switching"><i class="solitude st-moon-clear-fill"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="Sidebar display control"><i class="solitude st-side-bar-fill"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Archives</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a></div></div></div><span class="sidebar-menu-item-title">Function</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude st-moon-clear-fill"></i><span>Display mode</span></span></div><span class="sidebar-menu-item-title">Tags</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E7%AC%94%E8%AE%B0/">笔记<sup>3</sup></a><a href="/tags/%E8%BD%AC%E8%BD%BD/">转载<sup>1</sup></a><a href="/tags/%E5%AD%A6%E4%B9%A0/">学习<sup>1</sup></a></div></div></div></div><!-- keyboard--><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="Back to home"><span class="title">NoThing</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">Play with Docker</a></div></div><div id="menus"></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="Console" href="javascript:void(0);"><i class="solitude st-dashboard-fill"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude st-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude st-menu-line"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://s2.loli.net/2025/01/24/O8DiUnmZCT5eHsJ.jpg" alt="Play with Docker"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="This article is a Original article, pay attention to the copyright.">Original</a><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/"><span class="tags-name tags-punctuation">笔记</span></a></div></div></div></div><h1 class="post-title">Play with Docker</h1><div id="post-meta"><div class="meta-secondline"></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>Play with Docker</h1>
+<p>+++</p>
+<h2 id="使用-Play-with-Docker"><a class="headerlink" href="#使用-Play-with-Docker"></a>使用 Play with Docker</h2>
+<p>访问 <a target="_blank" rel="noopener" href="https://labs.play-with-docker.com">Play with Docker</a> 需要特定的（魔法）网络设置。登录 Docker 账号以开始使用。</p>
+<p><s>当然本地安装 docker 更加方便，VMware 也不错，但 Play with Docker 无需安装即可体验</s> 😏</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2025/01/24/O8DiUnmZCT5eHsJ.jpg" alt="运行效果" loading="lazy"></p>
+<h3 id="创建实例"><a class="headerlink" href="#创建实例"></a>创建实例</h3>
+<p>点击 “Add new instance” 来创建一个新的 Docker 实例。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="/./../../../../markdowns/assets/%25E5%25B1%258F%25E5%25B9%2595%25E6%2588%25AA%25E5%259B%25BE_23-1-2025_3424_labs.play-with-docker.com.jpeg" alt="创建实例" loading="lazy"></p>
+<h3 id="一个有趣的容器"><a class="headerlink" href="#一个有趣的容器"></a>一个有趣的容器</h3>
+<p>可以尝试运行一个 2048 小游戏的容器，通过下面的命令：</p>
+<p>（在 Play with Docker 网页中请使用快捷键 <code>ctrrl+shift+v</code> 进行粘贴）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -it -p 80:80 cnrock/2048</span><br></pre></td></tr></table></figure>
+<p>访问分配给该容器的 IP 地址（可以直接点击上方 80 跳转）来开始游戏。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2025/01/24/JbcdvTmqX7ZiMue.jpg" alt="port80" loading="lazy"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2025/01/24/xO8jQrgitPhT51D.jpg" alt="2048" loading="lazy"></p>
+<h2 id="Ubuntu-环境配置"><a class="headerlink" href="#Ubuntu-环境配置"></a>Ubuntu 环境配置</h2>
+<h3 id="SSH-远程连接"><a class="headerlink" href="#SSH-远程连接"></a>SSH 远程连接</h3>
+<p>（可选，建议跳过，4 小时的使用时间不值当多费功夫，虽然可以无限续杯）</p>
+<p>若需要远程连接，可以复制提供的 SSH 命令，并在本地终端或命令提示符中运行它。如果遇到密钥问题，请生成新的 SSH 密钥对：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
+<p>一路按 Enter 键接受默认选项即可。</p>
+<h3 id="启动-Ubuntu-并安装-Neofetch"><a class="headerlink" href="#启动-Ubuntu-并安装-Neofetch"></a>启动 Ubuntu 并安装 Neofetch</h3>
+<p>启动一个带有特权模式的 Ubuntu 容器（注意：在本地环境中不要这样操作，因为特权模式的容器对宿主机的文件系统有较高的访问权限，存在安全风险），并将其挂载到主机文件系统：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -itd --privileged --init -v /:/mnt --network host ubuntu</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>-itd</code> 让容器在后台运行但仍然保持交互性。</li>
+<li><code>--privileged</code> 给予容器额外的权限。</li>
+<li><code>-v /:/mnt</code> 将宿主机的根目录挂载到容器内的 <code>/mnt</code> 目录。</li>
+<li><code>--network host</code> 使用宿主机的网络栈。</li>
+</ul>
+<p>然后进入这个容器并安装 <code>neofetch</code> 来显示系统信息。</p>
+<p>首先找到容器 ID：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+<p>使用容器 ID 进入容器并更新软件包列表，然后安装 <code>neofetch</code>：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it &lt;容器ID&gt; bash </span><br><span class="line">apt update -y &amp;&amp; apt install neofetch -y</span><br></pre></td></tr></table></figure>
+<p>替换 <code>&lt;容器ID&gt;</code> 为实际的容器 ID 或名称。最后，可以通过 <code>neofetch</code> 查看系统的简要信息。</p>
+<h2 id="部署-Code-Server"><a class="headerlink" href="#部署-Code-Server"></a>部署 Code-Server</h2>
+<p>Code-Server 是 VS Code 的一个开源版本，可以在任何地方通过浏览器访问。</p>
+<p>参考官方文档：<a target="_blank" rel="noopener" href="https://coder.com/docs/admin/templates/extending-templates/web-ides#code-server">Web IDEs and Coder Apps | Coder Docs</a></p>
+<h3 id="Vim-快速指北（指南）"><a class="headerlink" href="#Vim-快速指北（指南）"></a>Vim 快速指北（指南）</h3>
+<p>vim 的操作方式与大多数现代编辑器不同。</p>
+<h4 id="启动和退出"><a class="headerlink" href="#启动和退出"></a>启动和退出</h4>
+<ul>
+<li><strong>启动</strong>：命令行中输入 <code>vim 文件名</code>（下文用到此操作）或 <code>vim</code>。</li>
+<li><strong>退出</strong>（在普通模式下执行）：
+<ul>
+<li>不保存更改退出：<code>:q!</code> 并按下 Enter 键</li>
+<li>保存并退出：<code>:wq</code> 或 <code>ZZ</code> 并按下 Enter 键（下文用到）</li>
+</ul>
+</li>
+</ul>
+<h4 id="模式"><a class="headerlink" href="#模式"></a>模式</h4>
+<p>Vim 主要有（下文用到）三种模式：</p>
+<ol>
+<li><strong>普通模式</strong>：默认模式，用于执行命令，在其他模式中可通过按 <code>Esc</code> 返回普通模式。</li>
+<li><strong>插入模式</strong>：按下 <code>i</code> 进入此模式，开始编辑文本。</li>
+<li><strong>命令行模式</strong>：按 <code>:</code> 进入此模式，输入命令如保存文件或退出。</li>
+</ol>
+<h3 id="安装与配置"><a class="headerlink" href="#安装与配置"></a>安装与配置</h3>
+<p>安装必要的工具 Vim、unzip 和 curl：</p>
+<p>安装过程要求设置地区：第一个输入 5，第二个输入 69</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install vim unzip curl -y</span><br></pre></td></tr></table></figure>
+<p>安装 code-server：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://code-server.dev/install.sh | sh</span><br></pre></td></tr></table></figure>
+<p>启动 code-server 查看默认参数：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">code-server</span><br></pre></td></tr></table></figure>
+<p>使用快捷键 <code>Ctrl+C</code> 停止服务后编辑配置文件 <code>/root/.config/code-server/config.yaml</code>，</p>
+<p>使用命令 <code>vim ~/.config/code-server/config.yaml</code> 进入 vim ，修改如下内容：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">bind-addr:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span><span class="string">:8080</span> <span class="comment"># 绑定地址和端口</span></span><br><span class="line"><span class="attr">auth:</span> <span class="string">password</span> <span class="comment"># 设置验证方式</span></span><br><span class="line"><span class="attr">password:</span> <span class="string">your_password_here</span> <span class="comment"># 设置个人密码</span></span><br></pre></td></tr></table></figure>
+<p>保存更改并重新启动 code-server：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">code-server &amp;</span><br></pre></td></tr></table></figure>
+<p>现在可以从浏览器访问 http://&lt;服务器IP&gt;: 8080 进入 Web IDE。</p>
+<p>（也可以直接点击上方的 <code>OPEN PORT</code>，然后输入 8080 跳转）</p>
+<p>输入密码提交后可能无法访问，刷新即可</p>
+<h2 id="使用-VS-Code-界面进行开发"><a class="headerlink" href="#使用-VS-Code-界面进行开发"></a>使用 VS Code 界面进行开发</h2>
+<p>从端口 8080 访问 VS Code Web IDE，然后使用快捷键 <code>CTRL+O</code> 打开文件夹 <code>\mnt\home</code>，在此目录下可以持久保存文件。以下为演示内容：</p>
+<h3 id="demo-1-编写-C"><a class="headerlink" href="#demo-1-编写-C"></a>demo_1 编写 C++</h3>
+<ol>
+<li>在 home 目录创建一个 cpp 文件夹并在此目录下新建 C++ 文件 <code>hello.cpp</code>。</li>
+<li>安装编译器 <code>g++</code>：<code>apt install g++ -y</code>（在 vscode web 界面打开新的终端执行此命令）。</li>
+<li>转到 cpp 目录下：<code>cd cpp</code>, 编译代码：<code>g++ -o hello hello.cpp</code>。</li>
+<li>运行程序：<code>./hello</code>。</li>
+</ol>
+<h3 id="demo-2-Web-开发"><a class="headerlink" href="#demo-2-Web-开发"></a>demo_2 Web 开发</h3>
+<ol>
+<li>创建 <code>web</code> 文件夹，并在其中建立 HTML 文件 <code>index.html</code>。</li>
+<li>使用 Emmet 插件快速生成 HTML 结构：输入 <code>!</code> 并按 <code>Enter</code>。</li>
+<li>安装 Bun：<code>curl -fsSL https://bun.sh/install | bash</code>，然后执行： <code>source ~/.bashrc</code>。</li>
+<li>转到 web 文件夹, 安装并指定端口启动： <code>bunx http-server --port 80</code></li>
+<li>浏览器访问该网页。</li>
+<li>最后可以使用 <code>ctrl+c</code> 结束 http-server 进程。</li>
+</ol>
+<p><img src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2025/01/24/Bspjxy8qOkYoiDX.png" alt="vscode" loading="lazy"></p>
+<p>+++</p>
+<p>写在最后：本文仅作为本人学习笔记使用，如有错误欢迎指教。</p>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src= "/img/loading.gif" data-lazy-src="/img/pwa/favicon.ico"></a><div class="post-copyright__author_name">Nothing</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/"><span class="tags-punctuation"></span>笔记<span class="tagsPageCount">3</span></a></div></div><div class="social-share"></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/01/26/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA2-0/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hexo博客搭建2.0</div></div></a></div><div class="next-post pull-right"><a href="/2025/01/24/Markdown%E8%AF%AD%E6%B3%95%E8%AF%B4%E6%98%8E/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Markdown语法说明</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="Avatar" src= "/img/loading.gif" data-lazy-src="/img/me.jpeg"><div class="avatar-sticker"><img class="avatar-sticker-img" src= "/img/loading.gif" data-lazy-src="https://7.isyangs.cn/34/65f2e4e0423cc-34.png" alt="Mood sticker"></div></div><div class="author-info__description_group"><div class="author-info__description">此处应该写一句<b>很中二</b>的话，</div><div class="author-info__description2">但是我没想到。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">NOBODY</div><div class="author-info__desc"></div></a><div class="card-info-social-icons is-center"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude st-menu-line"></i><span>Table of contents</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">Play with Docker</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Play-with-Docker"><span class="toc-text">使用 Play with Docker</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B"><span class="toc-text">创建实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E6%9C%89%E8%B6%A3%E7%9A%84%E5%AE%B9%E5%99%A8"><span class="toc-text">一个有趣的容器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SSH-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="toc-text">SSH 远程连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8-Ubuntu-%E5%B9%B6%E5%AE%89%E8%A3%85-Neofetch"><span class="toc-text">启动 Ubuntu 并安装 Neofetch</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2-Code-Server"><span class="toc-text">部署 Code-Server</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Vim-%E5%BF%AB%E9%80%9F%E6%8C%87%E5%8C%97%EF%BC%88%E6%8C%87%E5%8D%97%EF%BC%89"><span class="toc-text">Vim 快速指北（指南）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E5%92%8C%E9%80%80%E5%87%BA"><span class="toc-text">启动和退出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E5%BC%8F"><span class="toc-text">模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="toc-text">安装与配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-VS-Code-%E7%95%8C%E9%9D%A2%E8%BF%9B%E8%A1%8C%E5%BC%80%E5%8F%91"><span class="toc-text">使用 VS Code 界面进行开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#demo-1-%E7%BC%96%E5%86%99-C"><span class="toc-text">demo_1 编写 C++</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#demo-2-Web-%E5%BC%80%E5%8F%91"><span class="toc-text">demo_2 Web 开发</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude st-map-line"></i><span>New posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/01/26/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA2-0/" title="Hexo博客搭建2.0"><img alt="Hexo博客搭建2.0" src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2025/01/26/el5Fc6jOpPIM7oU.jpg"></a><div class="content"><a class="title" href="/2025/01/26/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA2-0/" title="Hexo博客搭建2.0">Hexo博客搭建2.0</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/24/Play-with-Docker-%E6%8C%87%E5%8C%97/" title="Play with Docker"><img alt="Play with Docker" src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2025/01/24/O8DiUnmZCT5eHsJ.jpg"></a><div class="content"><a class="title" href="/2025/01/24/Play-with-Docker-%E6%8C%87%E5%8C%97/" title="Play with Docker">Play with Docker</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/24/Markdown%E8%AF%AD%E6%B3%95%E8%AF%B4%E6%98%8E/" title="Markdown语法说明"><img alt="Markdown语法说明" src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2025/01/26/QB9DZa5SUtscvR7.png"></a><div class="content"><a class="title" href="/2025/01/24/Markdown%E8%AF%AD%E6%B3%95%E8%AF%B4%E6%98%8E/" title="Markdown语法说明">Markdown语法说明</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/24/Typaro%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" title="Typaro安装与配置"><img alt="Typaro安装与配置" src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2025/01/26/NiLPq67JMwOvQr3.png"></a><div class="content"><a class="title" href="/2025/01/24/Typaro%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" title="Typaro安装与配置">Typaro安装与配置</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/10/%E4%BD%BF%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="如何使用使用hexo创建个人博客"><img alt="如何使用使用hexo创建个人博客" src= "/img/loading.gif" data-lazy-src="/img/default.png"></a><div class="content"><a class="title" href="/2024/05/10/%E4%BD%BF%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="如何使用使用hexo创建个人博客">如何使用使用hexo创建个人博客</a></div></div></div></div></div></div></main><footer id="footer"><div id="footer_deal"></div><div id="st-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2024 - 2025 By&nbsp;<a class="footer-bar-link" href="/">NOBODY</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com" alt="GitHub">GitHub</a><a class="footer-bar-link cc" href="/null" aria-label="copyright"><i class="solitude st-copyright-line"></i><i class="solitude st-creative-commons-by-line"></i><i class="solitude st-creative-commons-nc-line"></i><i class="solitude st-creative-commons-nd-line"></i></a></div></div></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=1.10.6"></script><script src="/js/main.js?v=1.10.6"></script><script src="/js/third_party/waterfall.min.js?v=1.10.6"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="/js/third_party/universe.min.js?v=1.10.6"></script><script>dark()
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js"><script>(() => {
+    document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+        utils.wrap(item, 'div', {class: 'katex-wrap'})
+    })
+})();
+</script></script><script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/19.1.3/lazyload.iife.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.36/fancybox/fancybox.umd.min.js"></script><script src="/js/covercolor/local.js?v=1.10.6"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><div class="js-pjax"></div></div><!-- newest comment--><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ['title','#body-wrap','#site-config','meta[name="description"]','.js-pjax','meta[property^="og:"]','#config-diff'],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined)
+        document.documentElement.setAttribute('data-theme', 'dark');
+    else
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    is_rm && rm.mode(cachedMode === undefined || cachedMode === 'dark')
+}
+initTheme()</script><!-- google adsense--><!-- search--><!-- Tianli-Talk--><!-- music--></body></html><script>const posts=["2025/01/26/Hexo博客搭建2-0/","2025/01/24/Play-with-Docker-指北/","2025/01/24/Markdown语法说明/","2025/01/24/Typaro安装与配置/","2024/05/10/使用hexo创建个人博客/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); }</script>
