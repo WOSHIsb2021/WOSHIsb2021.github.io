@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Typora安装与配置 | Nothing</title><noscript>Please enable JavaScript to view the site</noscript><link rel="icon" href="/img/pwa/favicon.ico"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.10.6"><!-- inject head--><link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/7pOrz0WXB5ZWJPX/latest/iconfont.css"><!-- aplayer--><!-- swiper--><!-- fancybox ui--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.36/fancybox/fancybox.min.css"><!-- katex--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css"><!-- Open Graph--><meta name="description" content="Typora安装与配置 下载与安装 访问Typora — simple yet powerful Markdown reader.下载； 备用下载：typora-setup-x64.exe（Windows 64位版本，并且可能需要魔法） 安装： 运行下载的安装程序 选择安装路径（建议非系统盘） 按"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="Nothing"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/pwa/favicon.ico"><link rel="apple-touch-icon" href="/img/pwa/favicon.ico" sizes="180x180"><script>console.log(
+    "%c Program: Hexo %c Theme: Solitude %c Version: v1.10.6",
+    "border-radius:5px 0 0 5px;padding: 5px 10px;color:white;background:#ff3842;",
+    "padding: 5px 10px;color:white;background:#3e9f50;",
+    "padding: 5px 10px;color:white;background:#0084ff;border-radius:0 5px 5px 0",
+)
+</script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+    
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+    
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+    
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+    
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+        
+                if (name && keyObj[name]) return
+        
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+        }
+    })()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2024-05-09 16:00:00',
+    lazyload: {
+        enable: true,
+        error: '/img/error_load.webp'
+    },
+    copyright: {"limit":50,"author":"Author: NOBODY","link":"Link: ","source":"Source: Nothing","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."},
+    highlight: {
+        enable: true,
+        limit: 200,
+        expand: true,
+        copy: true,
+        syntax: 'highlight.js'
+    },
+    randomlink: false,
+    lang: {"theme":{"dark":"Dark","light":"Light"},"copy":{"success":"Copied","error":"Copy failed"},"backtop":"Back to top","time":{"day":" days ago","hour":" hours ago","just":"just","min":" minutes ago","month":" months ago"},"f12":"Developer mode is turned on, please follow the GPL.","totalk":"You don't need to delete blank lines, just type in your comments."},
+    aside: {
+        sayhello: {
+            morning: '一日之计在于晨',
+            noon: '吃饱了才有力气干活',
+            afternoon: '集中精力，攻克难关',
+            night: '早睡更健康',
+            goodnight: '睡个好觉，保证精力充沛',
+        },
+        sayhello2: [],
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: false,
+    lightbox: 'fancybox',
+    post_ai: false,
+    right_menu: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: false,
+    ai_text: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude st-close-fill"></i></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="Day and night switching"><i class="solitude st-moon-clear-fill"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="Sidebar display control"><i class="solitude st-side-bar-fill"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Archives</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a></div></div></div><span class="sidebar-menu-item-title">Function</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude st-moon-clear-fill"></i><span>Display mode</span></span></div><span class="sidebar-menu-item-title">Tags</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E7%AC%94%E8%AE%B0/">笔记<sup>4</sup></a><a href="/tags/%E8%BD%AC%E8%BD%BD/">转载<sup>1</sup></a><a href="/tags/%E5%AD%A6%E4%B9%A0/">学习<sup>1</sup></a></div></div></div></div><!-- keyboard--><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="Back to home"><span class="title">NoThing</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">Typora安装与配置</a></div></div><div id="menus"></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="Console" href="javascript:void(0);"><i class="solitude st-dashboard-fill"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude st-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude st-menu-line"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://s2.loli.net/2025/01/26/NiLPq67JMwOvQr3.png" alt="Typora安装与配置"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="This article is a Original article, pay attention to the copyright.">Original</a><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/"><span class="tags-name tags-punctuation">笔记</span></a></div></div></div></div><h1 class="post-title">Typora安装与配置</h1><div id="post-meta"><div class="meta-secondline"></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>Typora安装与配置</h1>
+<h2 id="下载与安装"><a class="headerlink" href="#下载与安装"></a>下载与安装</h2>
+<p>访问<a target="_blank" rel="noopener" href="https://typora.io/">Typora — simple yet powerful Markdown reader.</a>下载；</p>
+<p>备用下载：<a target="_blank" rel="noopener" href="https://1drv.ms/u/c/08f03b410bfa477e/Ecqph3Y2mfRHmrvUi_J-jwoBUQcZKhc2HEggM8tX6HuOpQ?e=T5JRba">typora-setup-x64.exe</a>（Windows 64位版本，并且可能需要魔法）</p>
+<p><strong>安装：</strong></p>
+<ul>
+<li>运行下载的安装程序</li>
+<li>选择安装路径（建议非系统盘）</li>
+<li>按照安装向导提示完成其余安装步骤</li>
+</ul>
+<h2 id="激活"><a class="headerlink" href="#激活"></a>激活</h2>
+<p>Typora 是一款商业软件，官方要求购买许可证以解锁全部功能。如果希望以合法的激活方式，请直接访问官方网站获取相关信息。请注意，任何绕过正版验证的行为可能违反服务条款，并可能导致软件不稳定或失去官方支持。</p>
+<p>但是对于没有稳定收入的学生群体来说，绕过正版验证并承担风险也未尝不可，以下方法仅供学习参考。</p>
+<p>激活步骤（仅Windows）：</p>
+<ol>
+<li>
+<p>下载工具<a target="_blank" rel="noopener" href="https://1drv.ms/u/c/08f03b410bfa477e/EZhU9B-mzPNEufs6kYGYPnIBe-FqPzdVx8-bjbXjycbOWA?e=XjNgyC">Typroa_Activation_Script.7z</a>，并解压文件，把解压出来的两个 <code>.exe</code> 文件复制到 Typora 的安装目录下（默认安装的文件夹名称为<code>Typora</code>）。</p>
+</li>
+<li>
+<p>以管理员身份运行 CMD（打开Typora文件夹在文件资源管理器文件路径栏里输入<code>cmd</code>并回车打开CMD）。</p>
+</li>
+<li>
+<p><s>按步骤2打开CMD的可以跳过此步骤。输入“cd 安装路径”，按回车，跳转到 Typora 再重新激活的。安装路径。</s></p>
+</li>
+<li>
+<p>先输入<code>node_inject.exe</code>按回车，等待提示&quot;done!&quot;。（在终端中执行命令为<code>./node_inject.exe</code>）</p>
+</li>
+<li>
+<p>再输入<code>license-gen.exe</code>按回车，等待显示序列号,然后复制。（在终端中执行命令为<code>./license-gen.exe</code>）</p>
+</li>
+<li>
+<p>打开 Typora 并输入该序列号激活，邮箱任意。</p>
+</li>
+<li>
+<p>更新后可能导致无法激活，需要先彻底卸载 Typora 再重新激活（备用下载版本有效）。</p>
+</li>
+</ol>
+<blockquote>
+<p>⚠️ 重要提示<br>
+激活后请前往 偏好设置 &gt; 通用 &gt; 关闭自动更新</p>
+</blockquote>
+<p>(激活方法原作者：<a target="_blank" rel="noopener" href="https://blog.csdn.net/2302_80441760/article/details/142605082">Typora的免费激活操作-CSDN博客</a>)</p>
+<h2 id="安装插件-可选"><a class="headerlink" href="#安装插件-可选"></a>安装插件(可选)</h2>
+<p>该插件工具可以使Markdown的编写过程更加轻松，新手建议安装。</p>
+<ol>
+<li>下载<a target="_blank" rel="noopener" href="https://1drv.ms/u/c/08f03b410bfa477e/Eb_ok7vRPOJKgw1Rh62_Hh0Bgk_F8O9dyEM5jm_IsL8t-A?e=BY3b8W">typora_plugin-1.11.34.zip</a></li>
+<li>解压，然后将<code>plugin</code>文件复制到Typora 的安装目录下的<code>resources</code>文件夹内(例如我的为<code>D:\Typora\resources\</code>)，打开<code>plugin</code>文件中的<code>bin</code>文件夹，打开<code>install_windows_amd_x64.exe</code>完成插件安装。</li>
+</ol>
+<h2 id="配置图床"><a class="headerlink" href="#配置图床"></a>配置图床</h2>
+<p>图床可以直接从Typora上传图片至云端存储，并自动插入链接。推荐使用PicGo作为图床工具。</p>
+<p><strong>图床配置步骤：</strong></p>
+<ol>
+<li>下载并安装 <a target="_blank" rel="noopener" href="https://molunerfinn.com/PicGo/">PicGo</a>，然后根据个人需求配置图片上传服务。</li>
+<li>打开Typora，进入<code>偏好设置 &gt; 图片</code>。</li>
+<li>将<code>插入图片时</code>选项更改为<code>上传图片</code>。</li>
+<li>在<code>上传服务</code>中选择<code>PicGo app</code>，并指定PicGo的安装路径（如 <code>D:\picGo\PicGo.exe</code>）。</li>
+</ol>
+<hr>
+<p>🌈 <strong>温馨提示</strong><br>
+本指南旨在帮助学生等用户更好地使用 Typora，请支持正版软件。</p>
+<p>本文仅供学习交流使用，侵删。</p>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src= "/img/loading.gif" data-lazy-src="/img/pwa/favicon.ico"></a><div class="post-copyright__author_name">Nothing</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/"><span class="tags-punctuation"></span>笔记<span class="tagsPageCount">4</span></a></div></div><div class="social-share"></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/01/24/Play-with-Docker-%E6%8C%87%E5%8C%97/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Play with Docker</div></div></a></div><div class="next-post pull-right"><a href="/2024/05/10/%E4%BD%BF%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">如何使用使用hexo创建个人博客</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="Avatar" src= "/img/loading.gif" data-lazy-src="/img/me.jpeg"><div class="avatar-sticker"><img class="avatar-sticker-img" src= "/img/loading.gif" data-lazy-src="https://7.isyangs.cn/34/65f2e4e0423cc-34.png" alt="Mood sticker"></div></div><div class="author-info__description_group"><div class="author-info__description">此处应该写一句<b>很中二</b>的话，</div><div class="author-info__description2">但是我没想到。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">NOBODY</div><div class="author-info__desc"></div></a><div class="card-info-social-icons is-center"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude st-menu-line"></i><span>Table of contents</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">Typora安装与配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85"><span class="toc-text">下载与安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BF%80%E6%B4%BB"><span class="toc-text">激活</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6-%E5%8F%AF%E9%80%89"><span class="toc-text">安装插件(可选)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%9B%BE%E5%BA%8A"><span class="toc-text">配置图床</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude st-map-line"></i><span>New posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/01/26/Docker%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" title="Dcoker安装与配置"><img alt="Dcoker安装与配置" src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2025/01/26/p3FekAzK5uPErCV.png"></a><div class="content"><a class="title" href="/2025/01/26/Docker%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" title="Dcoker安装与配置">Dcoker安装与配置</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/26/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA2-0/" title="Hexo博客搭建2.0"><img alt="Hexo博客搭建2.0" src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2025/01/26/el5Fc6jOpPIM7oU.jpg"></a><div class="content"><a class="title" href="/2025/01/26/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA2-0/" title="Hexo博客搭建2.0">Hexo博客搭建2.0</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/24/Markdown%E8%AF%AD%E6%B3%95%E8%AF%B4%E6%98%8E/" title="Markdown语法说明"><img alt="Markdown语法说明" src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2025/01/26/QB9DZa5SUtscvR7.png"></a><div class="content"><a class="title" href="/2025/01/24/Markdown%E8%AF%AD%E6%B3%95%E8%AF%B4%E6%98%8E/" title="Markdown语法说明">Markdown语法说明</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/24/Play-with-Docker-%E6%8C%87%E5%8C%97/" title="Play with Docker"><img alt="Play with Docker" src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2025/01/24/O8DiUnmZCT5eHsJ.jpg"></a><div class="content"><a class="title" href="/2025/01/24/Play-with-Docker-%E6%8C%87%E5%8C%97/" title="Play with Docker">Play with Docker</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/24/Typora%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" title="Typora安装与配置"><img alt="Typora安装与配置" src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2025/01/26/NiLPq67JMwOvQr3.png"></a><div class="content"><a class="title" href="/2025/01/24/Typora%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" title="Typora安装与配置">Typora安装与配置</a></div></div></div></div></div></div></main><footer id="footer"><div id="footer_deal"></div><div id="st-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2024 - 2025 By&nbsp;<a class="footer-bar-link" href="/">NOBODY</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com" alt="GitHub">GitHub</a><a class="footer-bar-link cc" href="/null" aria-label="copyright"><i class="solitude st-copyright-line"></i><i class="solitude st-creative-commons-by-line"></i><i class="solitude st-creative-commons-nc-line"></i><i class="solitude st-creative-commons-nd-line"></i></a></div></div></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=1.10.6"></script><script src="/js/main.js?v=1.10.6"></script><script src="/js/third_party/waterfall.min.js?v=1.10.6"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="/js/third_party/universe.min.js?v=1.10.6"></script><script>dark()
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js"><script>(() => {
+    document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+        utils.wrap(item, 'div', {class: 'katex-wrap'})
+    })
+})();
+</script></script><script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/19.1.3/lazyload.iife.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.36/fancybox/fancybox.umd.min.js"></script><script src="/js/covercolor/local.js?v=1.10.6"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><div class="js-pjax"></div></div><!-- newest comment--><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ['title','#body-wrap','#site-config','meta[name="description"]','.js-pjax','meta[property^="og:"]','#config-diff'],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined)
+        document.documentElement.setAttribute('data-theme', 'dark');
+    else
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    is_rm && rm.mode(cachedMode === undefined || cachedMode === 'dark')
+}
+initTheme()</script><!-- google adsense--><!-- search--><!-- Tianli-Talk--><!-- music--></body></html><script>const posts=["2025/01/26/Docker安装与配置/","2025/01/26/Hexo博客搭建2-0/","2025/01/24/Markdown语法说明/","2025/01/24/Play-with-Docker-指北/","2025/01/24/Typora安装与配置/","2024/05/10/使用hexo创建个人博客/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); }</script>
